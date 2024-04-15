@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Single Price Grid Component</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #E6EFF6;
+    }
+
+    .card {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      padding: 5rem;
+      grid-template-areas:
+        "grid-section-1 grid-section-1"
+        "grid-section-2 grid-section-3"
+      ;
+    }
+
+    #grid-section-1 {
+      grid-area: grid-section-1;
+      background-color: #fff;
+      border-radius: 10px 10px 0 0;
+    }
+
+    #grid-section-2 {
+      grid-area: grid-section-2;
+      border-radius: 0 0 0 10px;
+      background-color: #2BB3B1;
+    }
+
+    #grid-section-3 {
+      grid-area: grid-section-3;
+      background-color: #4ABEBD;
+      border-radius:  0 0 10px 0;
+    }
+
+    .price {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .about {
+      padding: 40px;
+    }
+    p li {
+      font-size: 16px;
+
+    }
+
+    .join {
+      color: hsl(179, 62%, 43%);
+      margin: 20px;
+    }
+    
+    .days {
+      margin: 20px;
+      color: hsl(71, 73%, 54%);
+    }
+    
+    .gain {
+      margin: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      color: hsl(218, 22%, 67%);
+    }
+
+
+    button {
+      width: 100%;
+      background-color: hsl(71, 73%, 54%);
+      color: white;
+      margin: 10px;
+      padding: 20px;
+      font-size: 17px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+
+    }
+    .fulll {
+      color: white;
+      margin: 10px;
+      font-size: 37px;
+    }
+    .mon, .full, .why{
+      color: white;
+      margin: 10px;
+    }
+    .per, li {
+      color: hsl(204, 43%, 93%);
+      margin: 10px;
+      opacity: 0.8;
+    }
+    li {
+      list-style: none;
+      color: hsl(204, 43%, 93%);
+      margin: 4px;
+    }
+    @media (max-width:831px) {
+      .card {
+        padding: 1rem;
+        grid-template-areas: 
+        "grid-section-1 grid-section-1 grid-section-1"
+        "grid-section-2 grid-section-2 grid-section-2"
+        "grid-section-3 grid-section-3 grid-section-3"
+        ;
+      }
+        #grid-section-1 {
+          border-radius: 10px 10px 0 0;
+        }
+        #grid-section-2 {
+          border-radius: 0 0 0 0;
+        }
+        #grid-section-3 {
+          border-radius: 0 0 10px 10px;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="grid-section-1" id="grid-section-1">
+        <div class="about">
+          <h2 class="join">Join our community</h2>
+          <h3 class="days">30-day, hassle-free money back guarantee</h3>
+          <p class="gain">Gain access to our full library of tutorials along with expert code reviews.
+            Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+      </div>
+      <div class="grid-section-2" id="grid-section-2">
+        <div class="about">
+          <h3 class="mon">Monthly Subscription</h3>
+          <div class="price">
+            <h2 class="fulll">$29</h2>
+            <p class="per">per month</p>
+          </div>
+          <P class="full">Full access for less than $1 a day</P>
+          <button>Sign Up</button>
+        </div>
+      </div>
+      <div class="grid-section-3" id="grid-section-3">
+        <div class="about">
+          <h3 class="why">Why Us</h3>
+          <p class="tut">
+          <ul>
+            <li>Tutorials by industry experts</li>
+            <li>Peer $ expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
